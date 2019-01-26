@@ -6,16 +6,53 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     Rigidbody2D rigidBody;
+    Vector2 facingDirection;
 
     void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
     }
-    
+
     void FixedUpdate()
     {
-        Vector2 direction = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized * 20f;
+        Vector2 direction;
 
-        rigidBody.AddForce(direction);
+        if (facingDirection.x != 0)
+        {
+            direction = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
+
+            if (direction.magnitude == 0)
+            {
+                direction = new Vector2(0, Input.GetAxisRaw("Vertical"));
+            }
+        }
+        else
+        {
+            direction = new Vector2(0, Input.GetAxisRaw("Vertical"));
+
+            if (direction.magnitude == 0)
+            {
+                direction = new Vector2(Input.GetAxisRaw("Horizontal"), 0);
+            }
+        }
+
+        rigidBody.velocity = direction * 2;
+
+        if (direction.magnitude > 0)
+        {
+            facingDirection = direction;
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, facingDirection, 1, 1 << 8);
+
+                if (hit)
+                {
+                    hit.transform.GetComponent<Interactable>().onInteract.Invoke();
+                }
+            }
+        }
     }
 }
