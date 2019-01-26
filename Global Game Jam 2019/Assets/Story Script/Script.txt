@@ -1,0 +1,177 @@
+"I miss my house. I just want to go back and enjoy my life. I don't even remember how long it's been since HE kidnapped me."
+
+"If only he left my door unlocked just once, I could make a run for it..."
+
+"Wait, my door is unlocked! I might be able to escape from this damn house."
+
+"I shouldn't be going upstairs, I need to go downstairs to the front door."
+
+"I might need this key just in case I can't leave the house."
+
+Picked Up Key
+
+"No time to stay here, I need to get home!"
+
+"Oh no, the door's locked!"
+
+"What are you doing out of your room, Angelica?"
+
+"You know that's not my name, Greg!"
+
+"IT'S 'FATHER' TO YOU MISS! Go to your room this instant!"
+
+"Actually no I don't trust you to go back on your own, here I'll put you in there and you'll be grounded FOREVER!"
+
+"DON'T TOUCH ME!"
+
+"Why did it have to be locked. The one time that he locked both locks and it's when I get a chance to escape..."
+
+"Hmmm... I wonder if this key unlocks my room. Greg didn't seem to lock the door with the key like usual. Maybe he dropped it before he came downstairs."
+
+"It worked!"
+
+"Ok, now to find the keys to the front door."
+
+"Seems to be locked. I probably need a key of some sorts."
+
+"I hate how Greg puts you in a cage all the time, Boo. You look hungry. I'll find you some food, 'kay?"
+
+"A ha! I'll feed Boo this."
+
+"Good boy Boo. It didn't use to be this bad you know. It all went down once they pas-."
+"Hold on..." 
+"Why is there a key in the cage?"
+
+Picked Up Key
+
+"I don't have the right key to open this door."
+
+"Why isn't he in his room? He usually always is in here, right?"
+
+"Why does he have so many different keys?"
+"Oh well..."
+
+Picked Up Key
+
+"He's close"
+
+"What is this doing here?"
+
+Picked Up Bust
+
+"Hmm... empty. Just like his heart."
+
+"And... another key. Hopefully I'm getting at least a little closer to getting out of this hell hole."
+
+"Painkillers... spilled all over the floor." 
+"Wait, didn't Greg's wife OD off of something like these?" 
+"Did he never clean these up?"
+
+"God he must miss his family. If it weren't for me being kidnapped I might actually feel sorry for the guy."
+"He lost what makes his home, well home."
+
+Picked Up Key
+
+"It's a newsletter from 5 years ago. It has Greg in it."
+
+"Zot Times Sports: Legendary Baseball hitter Greg Mackey has finally retired from his amazing record setting career."
+"Known for his 153 home run hits over just this season alone, #11 will be confident knowing that his record shouldn't be beaten anytime soon."
+"We will definitely miss his smile on the field"
+
+"I guess that explains how he has such a nice house."
+
+"I wonder if this can be broken with enough force"
+
+"Maybe I can just smash his face in with this. Or something... I just need to hit something."
+
+Picked Up Baseball Bat
+
+"Are there even enough doors for the amount of keys that he has?"
+
+"..."
+
+"..."
+
+"I..."
+
+"Why does he have all of this?"
+
+"The monitor's unlocked, maybe I can call for help on it."
+
+"Are you serious! It's not connected to a network."
+"Actually, it seems to have only one file on it."
+"Angelica.txt"
+"I wonder what's in it."
+
+"It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19
+ It's over: 01-15-19"
+
+"Is that what Angelica looked like? Greg never brough her outside and I never got to see her while she was alive."
+"She looks a lot like me."
+"..."
+"Is that why he chose to kidnap me?"
+
+"Oh there's one more line"
+"If you run out of options, there is the safe right behind you. You know the code. You've been typing it by hand for years on end."
+
+"Was he planning to end his own life with this?"
+
+Picked Up Pistol
+
+"He'll have to let me out now that I have this."
+
+"It's over Greg, let me out right this minute or else."
+
+"You don't understand Angeli-"
+
+"That's not my name! My name is Hope! Hope!"
+"Face it, she's dead Greg. Nothing is ever going to change that."
+
+"Maybe nothing can. But with you in her place I can at least achive some peace of mind after I lost both of the loves of my life."
+
+"Hand over the keys and let me out of here."
+
+"Bu-"
+
+"NO BUTS. I WILL SHOOT YOU!"
+
+"FINE."
+
+"Here, take him."
+
+"*He's just walking up to me. What's to stop him from just taking the gun out of my hands and putting me back in my room. Or worse...*"
+
+CHOICE: Trust Greg | Kill Greg
+
+Trust:
+"Just take it. Go. I realize now that nothing will salvage the wreck that is my heart."
+
+"You're a monster, Greg. I hope you suffer for this."
+
+
+Kill:
+*A single gunshot fills the room. Then, silence fills the air of the Mackey House*
+"Is.. Is it over?"
+"He's gone, free to join the rest of his family."
+"There's another key besides the one in the house. I wonder if that's for the basement?"
