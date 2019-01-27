@@ -20,6 +20,7 @@ public class Password : MonoBehaviour
     int index = 0;
     char[] charArray;
     bool activated;
+    int endDelay = 0;
 
     void Start()
     {
@@ -68,21 +69,28 @@ public class Password : MonoBehaviour
 
             if (index >= characters)
             {
-                player.enabled = true;
-                textBox.color = Color.clear;
-                text.text = "";
-
-                if (new string(charArray).ToLower() == answer.ToLower())
+                if (endDelay < 30)
                 {
-                    onCorrect.Invoke();
+                    endDelay++;
                 }
                 else
                 {
-                    onIncorrect.Invoke();
-                }
+                    player.enabled = true;
+                    textBox.color = Color.clear;
+                    text.text = "";
 
-                charArray = null;
-                activated = false;
+                    if (new string(charArray).ToLower() == answer.ToLower())
+                    {
+                        onCorrect.Invoke();
+                    }
+                    else
+                    {
+                        onIncorrect.Invoke();
+                    }
+
+                    charArray = null;
+                    activated = false;
+                }
             }
         }
         else
@@ -98,6 +106,7 @@ public class Password : MonoBehaviour
         index = 0;
         activated = true;
         textBox.color = Color.white;
+        endDelay = 0;
 
         if (numbers)
             charArray = new string('*', characters).ToCharArray();
