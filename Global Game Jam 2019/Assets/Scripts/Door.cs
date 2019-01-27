@@ -11,8 +11,7 @@ public class Door : MonoBehaviour
     public TileBase[] doorTiles = new TileBase[2];
     public AudioClip[] sounds = new AudioClip[2];
     public int lockId = 0;
-
-    public static List<int> keys = new List<int>();
+    
     public bool opened = false;
 
     AudioSource audioSource;
@@ -45,6 +44,6 @@ public class Door : MonoBehaviour
 
     bool Unlocked()
     {
-        return lockId == 0 || keys.Contains(lockId);
+        return lockId == 0 || EventTriggers.keys.Contains(lockId);
     }
 }
