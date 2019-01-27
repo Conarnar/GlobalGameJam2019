@@ -1,3 +1,8 @@
+"It's a diary entry from Angelica."
+"It reads: May 24th, 2014:"
+"Dear Diary, I'm so excited for my birthday today! I hope that I get that super special awesome fidget spinner that I've always wanted."
+"I'll have to tell you how it goes tomorrow. Until then, bye!"
+
 "I miss my house. I just want to go back and enjoy my life. I don't even remember how long it's been since HE kidnapped me."
 
 "If only he left my door unlocked just once, I could make a run for it..."
