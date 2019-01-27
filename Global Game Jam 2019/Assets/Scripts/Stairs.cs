@@ -24,7 +24,7 @@ public class Stairs : MonoBehaviour
     {
         for (int i = 0; i < 30; i++)
         {
-            collision.transform.position = Vector3.Lerp(collision.transform.position, transform.position, 0.1f);
+            collision.transform.position = Vector3.Lerp(collision.transform.position, (Vector2) transform.position - collision.offset, 0.1f);
             yield return null;
         }
 
