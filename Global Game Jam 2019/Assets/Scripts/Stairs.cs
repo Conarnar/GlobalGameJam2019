@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class Stairs : MonoBehaviour
 {
     public string nextScene;
+    public static Vector3 spawn;
+
+    public Vector3 spawnPoint;
 
     bool entered = false;
 
@@ -28,6 +31,7 @@ public class Stairs : MonoBehaviour
             yield return null;
         }
 
+        spawn = spawnPoint;
         SceneManager.LoadScene(nextScene);
     }
 }

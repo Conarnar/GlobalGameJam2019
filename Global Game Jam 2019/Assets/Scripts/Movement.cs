@@ -17,6 +17,11 @@ public class Movement : MonoBehaviour
 
     void Start()
     {
+        if (Stairs.spawn != null)
+        {
+            transform.position = Stairs.spawn;
+        }
+
         facingDirection = Vector2.down;
         rigidBody = GetComponent<Rigidbody2D>();
     }
