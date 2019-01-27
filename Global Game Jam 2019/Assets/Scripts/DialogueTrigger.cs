@@ -11,6 +11,8 @@ public class DialogueTrigger : MonoBehaviour
 
     public List<Dialogue> dialogues = new List<Dialogue>();
 
+    public bool IsRunning { get; private set; } = false;
+
     void Start()
     {
         textBox.color = Color.clear;
@@ -24,7 +26,10 @@ public class DialogueTrigger : MonoBehaviour
         Dialogue dialogue = dialogues.Find(d => d.key == key);
 
         if (dialogue != null)
+        {
+            IsRunning = true;
             StartCoroutine(RunDialogue(dialogue.sentences));
+        }
     }
 
     IEnumerator RunDialogue(string[] sentences)
@@ -68,6 +73,7 @@ public class DialogueTrigger : MonoBehaviour
             yield return null;
         }
 
+        IsRunning = false;
         player.enabled = true;
     }
 }

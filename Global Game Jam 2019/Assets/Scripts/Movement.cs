@@ -19,7 +19,7 @@ public class Movement : MonoBehaviour
     {
         if (Stairs.spawn != null)
         {
-            //transform.position = Stairs.spawn;
+            transform.position = Stairs.spawn;
         }
 
         facingDirection = Vector2.down;

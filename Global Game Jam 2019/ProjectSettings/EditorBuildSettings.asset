@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Floor 3.unity
     guid: 6235e40a5bd866b48a07472265a01fa4
+  - enabled: 1
+    path: Assets/Scenes/Floor2.unity
+    guid: 630dc177ec9664ccea5c8e1322c01020
+  - enabled: 1
+    path: Assets/Scenes/Floor1.unity
+    guid: 4f64bc2448fc748fb8177b9572af97d7
   m_configObjects: {}
