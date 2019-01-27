@@ -336,6 +336,7 @@ MonoBehaviour:
     - 'April: "Notes.txt"'
     - 'April: "If you run out of options, there is the safe in the attic. You know
       the code. You''ve been typing it by hand for years on end."'
+  pause: 0
 --- !u!114 &89722093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,6 +492,7 @@ MonoBehaviour:
   - key: interact
     sentences:
     - 'Nothing useful in here. '
+  pause: 0
 --- !u!114 &227343744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +937,7 @@ MonoBehaviour:
     sentences:
     - 'April: "What is this doing here?"'
     - Picked Up Bust
+  pause: 0
 --- !u!114 &403399057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,6 +1173,7 @@ MonoBehaviour:
   - key: third
     sentences:
     - 'April: "Why isn''t he in his room? He usually always is in here, right?"'
+  pause: 0
 --- !u!114 &480129565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1668,6 +1672,7 @@ MonoBehaviour:
   - key: door
     sentences:
     - 'April: "Seems to be locked. I probably need a key of some sorts."'
+  pause: 0
 --- !u!114 &727863293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6278,6 +6283,7 @@ MonoBehaviour:
     - 'T.V.: "It has been one week since April Jones was reported missing. There are
       no signs of her whereabouts."'
     - 'April: "Man, already a week. I need to get out of here."'
+  pause: 0
 --- !u!1 &1688749761
 GameObject:
   m_ObjectHideFlags: 0
@@ -6590,6 +6596,7 @@ MonoBehaviour:
   - key: incorrect
     sentences:
     - The safe does not open
+  pause: 0
 --- !u!114 &1889440351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6817,6 +6824,7 @@ MonoBehaviour:
     - 'April: "Hold on..." '
     - 'April: "Why is there a key in the cage?"'
     - Picked Up Key
+  pause: 0
 --- !u!114 &1949604205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7034,6 +7042,7 @@ MonoBehaviour:
   - key: incorrect
     sentences:
     - 'April: "Hmmm it''s locked. Seems like I need a number combination to open it."'
+  pause: 0
 --- !u!114 &1974255940
 MonoBehaviour:
   m_ObjectHideFlags: 0

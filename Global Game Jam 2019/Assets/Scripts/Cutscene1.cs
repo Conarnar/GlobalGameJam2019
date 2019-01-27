@@ -36,6 +36,7 @@ public class Cutscene1 : MonoBehaviour
         trigger.Trigger("cutscene");
 
         yield return new WaitUntil(() => trigger.GetIndex > 3);
+        trigger.pause = true;
 
         FadeManager.FadeToColor(Color.black, 120);
 

@@ -12,7 +12,12 @@ public class DialogueTrigger : MonoBehaviour
     public List<Dialogue> dialogues = new List<Dialogue>();
 
     public bool IsRunning { get; private set; } = false;
+    public bool IsWaiting { get; private set; } = false;
     public int GetIndex { get; private set; } = 0;
+
+    public bool pause = false;
+
+    bool closed;
 
     void Start()
     {
@@ -38,6 +43,7 @@ public class DialogueTrigger : MonoBehaviour
         {
             player.enabled = false;
             IsRunning = true;
+            IsWaiting = false;
             StartCoroutine(RunDialogue(dialogue.sentences, delay));
         }
     }
@@ -69,14 +75,20 @@ public class DialogueTrigger : MonoBehaviour
                         text.text += characters[i];
                     }
                 }
+                IsWaiting = false;
                 yield return null;
             }
 
-            while (!Input.GetKeyDown(KeyCode.Space))
+            closed = false;
+
+            while ((!Input.GetKeyDown(KeyCode.Space) || pause) && !closed)
             {
+                IsWaiting = true;
                 yield return null;
             }
         }
+
+        IsWaiting = false;
 
         text.text = "";
 
@@ -88,6 +100,11 @@ public class DialogueTrigger : MonoBehaviour
 
         IsRunning = false;
         player.enabled = true;
+    }
+
+    public void Close()
+    {
+        closed = true;
     }
 }
 

@@ -93,10 +93,6 @@ public class Password : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            text.text = "";
-        }
     }
 
     public void Activate()

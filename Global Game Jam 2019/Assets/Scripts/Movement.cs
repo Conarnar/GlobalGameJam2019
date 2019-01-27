@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
-    Rigidbody2D rigidBody;
+    public Rigidbody2D rigidBody;
     public Vector2 facingDirection;
     public bool moving
     {
@@ -14,6 +14,8 @@ public class Movement : MonoBehaviour
             return rigidBody == null ? false : rigidBody.velocity.sqrMagnitude != 0;
         }
     }
+
+    public bool canMove = true;
 
     void Start()
     {
@@ -62,11 +64,15 @@ public class Movement : MonoBehaviour
             }
         }
 
-        if (direction.sqrMagnitude > 0)
-        {
-            facingDirection = direction;
-        }
 
-        rigidBody.velocity = direction * 10;
+        if (canMove)
+        {
+            if (direction.sqrMagnitude > 0)
+            {
+                facingDirection = direction;
+            }
+
+            rigidBody.velocity = direction * 2;
+        }
     }
 }
