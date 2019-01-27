@@ -6,10 +6,18 @@ using UnityEngine;
 public class Movement : MonoBehaviour
 {
     Rigidbody2D rigidBody;
-    Vector2 facingDirection;
+    public Vector2 facingDirection;
+    public bool moving
+    {
+        get
+        {
+            return rigidBody.velocity.sqrMagnitude != 0;
+        }
+    }
 
     void Start()
     {
+        facingDirection = Vector2.down;
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
@@ -41,9 +49,9 @@ public class Movement : MonoBehaviour
             facingDirection = direction;
         }
         
-        if (Input.GetKeyDown(KeyCode.Space) && rigidBody.velocity.sqrMagnitude == 0)
+        if (Input.GetKeyDown(KeyCode.Space) && !moving)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, facingDirection, 1, 1 << 8);
+            RaycastHit2D hit = Physics2D.Raycast((Vector2) transform.position + GetComponent<Collider2D>().offset, facingDirection, 1, 1 << 8);
 
             if (hit)
             {

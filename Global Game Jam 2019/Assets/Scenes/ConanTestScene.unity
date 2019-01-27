@@ -266,6 +266,7 @@ GameObject:
   - component: {fileID: 568361385}
   - component: {fileID: 568361388}
   - component: {fileID: 568361384}
+  - component: {fileID: 568361389}
   m_Layer: 0
   m_Name: stairs_0
   m_TagString: Untagged
@@ -285,6 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6191f1e464cfed47a50c4b366ea7556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  facingDirection: {x: 0, y: 0}
 --- !u!50 &568361385
 Rigidbody2D:
   serializedVersion: 4
@@ -343,12 +345,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 0786ecede521f9d449bfd9b1269a6120, type: 3}
+  m_Sprite: {fileID: 21300028, guid: c8020c0d5df6c424b84be56e349ec6b6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -362,7 +364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 568361383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.92, y: 1.78, z: 0}
+  m_LocalPosition: {x: 4.97, y: 1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -381,9 +383,65 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.2}
+  m_Offset: {x: 0, y: -0.65}
   serializedVersion: 2
   m_Radius: 0.3
+--- !u!114 &568361389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568361383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2de5f7100676ec24d87399700014adc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upFrames:
+    still: {fileID: 21300000, guid: c8020c0d5df6c424b84be56e349ec6b6, type: 3}
+    moving:
+    - {fileID: 21300136, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300122, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300124, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300126, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300128, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300130, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300132, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300134, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+  rightFrames:
+    still: {fileID: 21300042, guid: c8020c0d5df6c424b84be56e349ec6b6, type: 3}
+    moving:
+    - {fileID: 21300176, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300178, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300180, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300182, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300184, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300186, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300188, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300190, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+  downFrames:
+    still: {fileID: 21300028, guid: c8020c0d5df6c424b84be56e349ec6b6, type: 3}
+    moving:
+    - {fileID: 21300172, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300158, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300160, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300162, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300164, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300166, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300168, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300170, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+  leftFrames:
+    still: {fileID: 21300014, guid: c8020c0d5df6c424b84be56e349ec6b6, type: 3}
+    moving:
+    - {fileID: 21300154, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300140, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300142, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300144, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300146, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300148, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300150, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
+    - {fileID: 21300152, guid: a7bc688ea45cd024bb49901d3613ba65, type: 3}
 --- !u!1 &942737560
 GameObject:
   m_ObjectHideFlags: 0
@@ -1196,7 +1254,7 @@ SpriteRenderer:
   m_Size: {x: 1.28, y: 1.28}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &1461884848
