@@ -11,25 +11,25 @@ public class Door : MonoBehaviour
     public int lockId = 0;
 
     public static List<int> keys = new List<int>();
+    public bool opened = false;
 
-    void Update()
+    public void Toggle()
     {
-        foreach (Rigidbody2D rigidbody in GetComponentsInChildren<Rigidbody2D>())
+        if (Unlocked())
         {
-            rigidbody.simulated = !Unlocked();
+            opened = !opened;
+            tilemap.SetTile(position, doorTiles[opened ? 1 : 0]);
+            GetComponent<BoxCollider2D>().isTrigger = opened;
         }
-    }
+        else
+        {
+            DialogueTrigger dialogue = GetComponent<DialogueTrigger>();
 
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (Unlocked())
-            tilemap.SetTile(position, doorTiles[1]);
-    }
-
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (Unlocked())
-            tilemap.SetTile(position, doorTiles[0]);
+            if (dialogue != null)
+            {
+                dialogue.Trigger();
+            }
+        }
     }
 
     bool Unlocked()

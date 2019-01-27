@@ -36,23 +36,21 @@ public class Movement : MonoBehaviour
             }
         }
 
-        rigidBody.velocity = direction * 2;
-
-        if (direction.magnitude > 0)
+        if (direction.sqrMagnitude > 0)
         {
             facingDirection = direction;
         }
-        else
+        
+        if (Input.GetKeyDown(KeyCode.Space) && rigidBody.velocity.sqrMagnitude == 0)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, facingDirection, 1, 1 << 8);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, facingDirection, 1, 1 << 8);
 
-                if (hit)
-                {
-                    hit.transform.GetComponent<Interactable>().onInteract.Invoke();
-                }
+            if (hit)
+            {
+                hit.transform.GetComponent<Interactable>().onInteract.Invoke();
             }
         }
+
+        rigidBody.velocity = direction * 2;
     }
 }
