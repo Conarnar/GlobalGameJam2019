@@ -123,6 +123,8 @@ GameObject:
   - component: {fileID: 89722090}
   - component: {fileID: 89722089}
   - component: {fileID: 89722091}
+  - component: {fileID: 89722093}
+  - component: {fileID: 89722092}
   m_Layer: 8
   m_Name: Computer
   m_TagString: Untagged
@@ -218,6 +220,64 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 1.19}
   m_EdgeRadius: 0
+--- !u!114 &89722092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89722088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 361017889}
+  text: {fileID: 361017888}
+  player: {fileID: 1541506745}
+  dialogues:
+  - key: interact
+    sentences:
+    - 'April: The monitor''s unlocked, maybe I can call for help on it.'
+    - 'April: Are you serious! It''s not connected to a network.'
+    - 'April: Actually, it seems to have only one file on it.'
+    - 'April: Angelica.txt'
+    - 'April: I wonder what''s in it.'
+    - "It's over: 01-15-19\n It's over: 01-15-19\n It's over: 01-15-19\n It's over:
+      01-15-19\n It's over: 01-15-19\n It's over: 01-15-19\n It's over: 01-15-19\n
+      It's over: 01-15-19\n It's over: 01-15-19\n It's over: 01-15-19\n It's over:
+      01-15-19\n It's over: 01-15-19\n It's over: 01-15-19\n It's over: 01-15-19\n
+      It's over: 01-15-19\n It's over: 01-15-19\n It's over: 01-15-19\n It's over:
+      01-15-19\n It's over: 01-15-19\n It's over: 01-15-19\n It's over: 01-15-19\n
+      It's over: 01-15-19\n It's over: 01-15-19"
+--- !u!114 &89722093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89722088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f71967c2b6485c4d8496527cc22daf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 89722092}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: interact
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &227343739
 GameObject:
   m_ObjectHideFlags: 0
@@ -229,6 +289,8 @@ GameObject:
   - component: {fileID: 227343741}
   - component: {fileID: 227343740}
   - component: {fileID: 227343742}
+  - component: {fileID: 227343743}
+  - component: {fileID: 227343744}
   m_Layer: 8
   m_Name: Chest1
   m_TagString: Untagged
@@ -324,6 +386,53 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 0.75}
   m_EdgeRadius: 0
+--- !u!114 &227343743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227343739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 361017889}
+  text: {fileID: 361017888}
+  player: {fileID: 1541506745}
+  dialogues:
+  - key: interact
+    sentences:
+    - 'Nothing useful in here. '
+--- !u!114 &227343744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227343739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f71967c2b6485c4d8496527cc22daf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 227343743}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: interact
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &354523823
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,6 +666,8 @@ GameObject:
   - component: {fileID: 403399053}
   - component: {fileID: 403399052}
   - component: {fileID: 403399054}
+  - component: {fileID: 403399056}
+  - component: {fileID: 403399055}
   m_Layer: 8
   m_Name: BustOnMantle
   m_TagString: Untagged
@@ -652,6 +763,53 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.9}
   m_EdgeRadius: 0
+--- !u!114 &403399055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403399051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f71967c2b6485c4d8496527cc22daf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 403399056}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: interact
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &403399056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403399051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 361017889}
+  text: {fileID: 361017888}
+  player: {fileID: 1541506745}
+  dialogues:
+  - key: interact
+    sentences:
+    - Picked Up Bust
 --- !u!1 &480129559
 GameObject:
   m_ObjectHideFlags: 0
@@ -4680,7 +4838,7 @@ PrefabInstance:
     - target: {fileID: 4137450967644007894, guid: 6b23bb6fe5863f04abf4d6083853e198,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.46
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 4137450967644007894, guid: 6b23bb6fe5863f04abf4d6083853e198,
         type: 3}
@@ -5813,6 +5971,8 @@ GameObject:
   - component: {fileID: 1679047246}
   - component: {fileID: 1679047245}
   - component: {fileID: 1679047247}
+  - component: {fileID: 1679047249}
+  - component: {fileID: 1679047248}
   m_Layer: 8
   m_Name: tv-1.png (1)
   m_TagString: Untagged
@@ -5908,6 +6068,55 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.85}
   m_EdgeRadius: 0
+--- !u!114 &1679047248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679047244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f71967c2b6485c4d8496527cc22daf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1679047249}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: interact
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1679047249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679047244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 361017889}
+  text: {fileID: 361017888}
+  player: {fileID: 1541506745}
+  dialogues:
+  - key: interact
+    sentences:
+    - 'T.V.: It has been one week since April Jones was reported missing. There are
+      no signs of her whereabouts. '
+    - 'April: Man, already a week. I need to get out of here.'
 --- !u!1 &1727463290
 GameObject:
   m_ObjectHideFlags: 0
@@ -5998,6 +6207,8 @@ GameObject:
   - component: {fileID: 1949604202}
   - component: {fileID: 1949604201}
   - component: {fileID: 1949604203}
+  - component: {fileID: 1949604205}
+  - component: {fileID: 1949604204}
   m_Layer: 8
   m_Name: Dog_Cage-1
   m_TagString: Untagged
@@ -6083,6 +6294,86 @@ CircleCollider2D:
   m_Offset: {x: -0.03, y: -0.1}
   serializedVersion: 2
   m_Radius: 0.3
+--- !u!114 &1949604204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949604200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 361017889}
+  text: {fileID: 361017888}
+  player: {fileID: 1541506745}
+  dialogues:
+  - key: interact_without_bone
+    sentences:
+    - I hate how Greg puts you in a cage all the time, Boo. You look hungry. I'll
+      find you some food, kay?
+  - key: interact_with_bone
+    sentences:
+    - A ha! I'll feed Boo this.
+    - Good boy Boo. It didn't use to be this bad you know. It all went down once they
+      pas-.
+    - Hold on...
+    - Why is there a key in the cage?
+  - key: pick_up_key
+    sentences:
+    - Picked Up Key
+--- !u!114 &1949604205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949604200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f71967c2b6485c4d8496527cc22daf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1949604204}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: interact_without_bone
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1949604204}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: interact_with_bone
+          m_BoolArgument: 0
+        m_CallState: 0
+      - m_Target: {fileID: 1949604204}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: pick_up_key
+          m_BoolArgument: 0
+        m_CallState: 0
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1974255935
 GameObject:
   m_ObjectHideFlags: 0
@@ -6094,6 +6385,8 @@ GameObject:
   - component: {fileID: 1974255937}
   - component: {fileID: 1974255936}
   - component: {fileID: 1974255938}
+  - component: {fileID: 1974255940}
+  - component: {fileID: 1974255939}
   m_Layer: 8
   m_Name: Baseball_Bat_In_Class_Then_Missing-1
   m_TagString: Untagged
@@ -6189,6 +6482,67 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.55}
   m_EdgeRadius: 0
+--- !u!114 &1974255939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974255935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 361017889}
+  text: {fileID: 361017888}
+  player: {fileID: 1541506745}
+  dialogues:
+  - key: locked_interact
+    sentences:
+    - 'April: Hmmm it''s locked. Seems like I need a number combination to open it. '
+  - key: unlocked_interact
+    sentences:
+    - Picked Up Baseball Bat
+--- !u!114 &1974255940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974255935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f71967c2b6485c4d8496527cc22daf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1974255939}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: locked_interact
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1974255939}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: unlocked_interact
+          m_BoolArgument: 0
+        m_CallState: 0
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2058681697
 GameObject:
   m_ObjectHideFlags: 0
