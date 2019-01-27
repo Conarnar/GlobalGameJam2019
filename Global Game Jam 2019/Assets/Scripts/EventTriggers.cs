@@ -28,7 +28,7 @@ public class EventTriggers : MonoBehaviour
 
     public void HideObject()
     {
-        gameObject.SetActive(false);
+        GetComponent<SpriteRenderer>().color = Color.clear;
     }
 
     public void AddKey(int lockId)
