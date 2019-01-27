@@ -1,20 +1,26 @@
+
+	Diary Script:
 "It's a diary entry from Angelica."
 "It reads: May 24th, 2014:"
 "Dear Diary, I'm so excited for my birthday today! I hope that I get that super special awesome fidget spinner that I've always wanted."
 "I'll have to tell you how it goes tomorrow. Until then, bye!"
 
+	Opening Cutscene
 "I miss my house. I just want to go back and enjoy my life. I don't even remember how long it's been since HE kidnapped me."
 
 "If only he left my door unlocked just once, I could make a run for it..."
 
 "Wait, my door is unlocked! I might be able to escape from this damn house."
 
+	3rd floor trying to go upstairs but can't because of the cutscene
 "I shouldn't be going upstairs, I need to go downstairs to the front door."
 
+	Key on the floor to her room
 "I might need this key just in case I can't leave the house."
 
 Picked Up Key
 
+	Trying to open a door during the opening scene?
 "No time to stay here, I need to get home!"
 
 "Oh no, the door's locked!"
@@ -29,6 +35,7 @@ Picked Up Key
 
 "DON'T TOUCH ME!"
 
+	After getting yeeted to her room again
 "Why did it have to be locked. The one time that he locked both locks and it's when I get a chance to escape..."
 
 "Hmmm... I wonder if this key unlocks my room. Greg didn't seem to lock the door with the key like usual. Maybe he dropped it before he came downstairs."
@@ -37,46 +44,54 @@ Picked Up Key
 
 "Ok, now to find the keys to the front door."
 
+	Trying to open a locked door
 "Seems to be locked. I probably need a key of some sorts."
 
+	Interacting with Boo for the first time
 "I hate how Greg puts you in a cage all the time, Boo. You look hungry. I'll find you some food, 'kay?"
 
+	Finds Bone
 "A ha! I'll feed Boo this."
 
+	Feeds Boo
 "Good boy Boo. It didn't use to be this bad you know. It all went down once they pas-."
 "Hold on..." 
 "Why is there a key in the cage?"
 
 Picked Up Key
 
-"I don't have the right key to open this door."
-
+	Entering Greg's room
 "Why isn't he in his room? He usually always is in here, right?"
 
+	Finding the Key in the safe
 "Why does he have so many different keys?"
 "Oh well..."
 
 Picked Up Key
 
-"He's close"
-
+	Finding the head for the empty bust
 "What is this doing here?"
 
 Picked Up Bust
 
+	Either interacting with the empty bust or putting the head on the bust
 "Hmm... empty. Just like his heart."
 
+	Finds the key for the bust puzzle
 "And... another key. Hopefully I'm getting at least a little closer to getting out of this hell hole."
 
+	Sees painkillers on the floor
 "Painkillers... spilled all over the floor." 
 "Wait, didn't Greg's wife OD off of something like these?" 
 "Did he never clean these up?"
 
+	Upon entering "Painkillers" in the safe prompt
 "God he must miss his family. If it weren't for me being kidnapped I might actually feel sorry for the guy."
 "He lost what makes his home, well home."
 
 Picked Up Key
 
+	Reading the article from the chest
 "It's a newsletter from 5 years ago. It has Greg in it."
 
 "Zot Times Sports: Legendary Baseball hitter Greg Mackey has finally retired from his amazing record setting career."
@@ -85,14 +100,18 @@ Picked Up Key
 
 "I guess that explains how he has such a nice house."
 
+	Interacting with the broken board before breaking it
 "I wonder if this can be broken with enough force"
 
+	Upon picking up the bat
 "Maybe I can just smash his face in with this. Or something... I just need to hit something."
 
 Picked Up Baseball Bat
 
+	Finds the final key
 "Are there even enough doors for the amount of keys that he has?"
 
+	Entering the 5th floor
 "..."
 
 "..."
@@ -103,6 +122,7 @@ Picked Up Baseball Bat
 
 "The monitor's unlocked, maybe I can call for help on it."
 
+	Interacting with the computer
 "Are you serious! It's not connected to a network."
 "Actually, it seems to have only one file on it."
 "Angelica.txt"
@@ -140,12 +160,15 @@ Picked Up Baseball Bat
 "Oh there's one more line"
 "If you run out of options, there is the safe right behind you. You know the code. You've been typing it by hand for years on end."
 
+	Picking up the pistol after interacting with the safe
 "Was he planning to end his own life with this?"
 
 Picked Up Pistol
 
+	Leaving the room
 "He'll have to let me out now that I have this."
 
+	Final cutscene
 "It's over Greg, let me out right this minute or else."
 
 "You don't understand Angeli-"
