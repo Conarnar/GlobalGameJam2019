@@ -1,4 +1,4 @@
-				A Stranger's Home
+				   A Stranger's Home
 
 		Director, Producer,		-Conan Truong
 		Programming Lead
@@ -6,22 +6,21 @@
 		Writing Director		-Jacob Emerson
 
 		Assests Design			-Reggie Dequit
-						 Billy Villa
+								 Billy Villa
 				     
 
-				      Music
+   				        Music
 
-		    "Giant Wyrm" Kevin MacLeod (incompetech.com)
-	     Licensed under Creative Commons: By Attribution 3.0 License
-		    http://creativecommons.org/licenses/by/3.0/
+	     "Giant Wyrm" Kevin MacLeod (incompetech.com)
+		      (Version in game pitched down)
+   Licensed under Creative Commons: By Attribution 3.0 License
+	     http://creativecommons.org/licenses/by/3.0/
 		
-		    "Medusa" Kevin MacLeod (incompetech.com)
-	     Licensed under Creative Commons: By Attribution 3.0 License
-		    http://creativecommons.org/licenses/by/3.0/	
+		 "Medusa" Kevin MacLeod (incompetech.com)
+   Licensed under Creative Commons: By Attribution 3.0 License
+		 http://creativecommons.org/licenses/by/3.0/	
 
 
-				Special Thanks To:
+				  Special Thanks To:
 
-		  Universal LPC Spritesheet Character Generator
-	 	http://gaurav.munjal.us/Universal-LPC-Spritesheet-
-		               Character-Generator/#
+	   Universal LPC Spritesheet Character Generator
