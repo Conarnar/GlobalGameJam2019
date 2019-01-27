@@ -1718,8 +1718,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters: 5
-  numbers: 0
-  answer: penis
+  numbers: 1
+  answer: 42069
   player: {fileID: 568361384}
   textBox: {fileID: 889053486}
   text: {fileID: 213767973}
