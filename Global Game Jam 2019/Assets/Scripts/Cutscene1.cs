@@ -17,9 +17,11 @@ public class Cutscene1 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        print("test");
-        if (EventTriggers.keys.Contains(1))
+        if (EventTriggers.keys.Contains(1) && !EventTriggers.triggers.Contains("cutscene1"))
+        {
+            EventTriggers.triggers.Add("cutscene1");
             StartCoroutine(Run());
+        }
     }
 
     IEnumerator Run()

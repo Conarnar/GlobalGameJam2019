@@ -11,7 +11,7 @@ public class Movement : MonoBehaviour
     {
         get
         {
-            return rigidBody.velocity.sqrMagnitude != 0;
+            return rigidBody == null ? false : rigidBody.velocity.sqrMagnitude != 0;
         }
     }
 
@@ -67,6 +67,6 @@ public class Movement : MonoBehaviour
             facingDirection = direction;
         }
 
-        rigidBody.velocity = direction * 2;
+        rigidBody.velocity = direction * 10;
     }
 }

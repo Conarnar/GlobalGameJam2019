@@ -1,28 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EventTriggers : MonoBehaviour
 {
     public static List<int> keys = new List<int>();
-    public static bool takenFood = false;
-    public static bool takenBust = false;
-    public static bool placedBust = false;
-    public static bool takenBat = false;
-    public static bool boardBroken = false;
-    public static bool takenPistol = false;
-
-    public bool board = false;
-    public int keyId = 0;
-    public bool food = false;
+    public static List<string> triggers = new List<string>();
+    
+    public string triggerName;
+    public string requireTrigger;
+    public bool deleteIfTriggered = false;
+    public bool invokeOnStart = false;
+    public UnityEvent events;
 
     void Start()
     {
-        if (keys.Contains(keyId) ||
-            (board && boardBroken) || 
-            (food && takenFood))
+        if (deleteIfTriggered && triggers.Contains(triggerName) && (requireTrigger == "" || triggers.Contains(requireTrigger)))
         {
             gameObject.SetActive(false);
+        }
+
+        if (invokeOnStart && !triggers.Contains(triggerName) && (requireTrigger == "" || triggers.Contains(requireTrigger)))
+        {
+            events.Invoke();
+        }
+    }
+
+    public void InvokeIfNotTriggered()
+    {
+        if (!triggers.Contains(triggerName) && (requireTrigger == "" || triggers.Contains(requireTrigger)))
+        {
+            events.Invoke();
         }
     }
 
@@ -36,30 +45,8 @@ public class EventTriggers : MonoBehaviour
         keys.Add(lockId);
     }
 
-    public void ObtainFood()
+    public void triggerKey(string key)
     {
-        takenFood = true;
-    }
-
-    public void ObtainBust()
-    {
-        takenBust = true;
-    }
-
-    public void ObtainBat()
-    {
-        takenBat = true;
-    }
-
-    public void BreakBoard()
-    {
-        boardBroken = true;
-        GetComponent<AudioSource>().Play();
-    }
-
-    public void ObtainPistol()
-    {
-        takenPistol = true;
-        GetComponent<AudioSource>().Play();
+        triggers.Add(key);
     }
 }

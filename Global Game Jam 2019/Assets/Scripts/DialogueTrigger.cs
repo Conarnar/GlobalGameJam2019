@@ -21,12 +21,11 @@ public class DialogueTrigger : MonoBehaviour
 
     public void Trigger(string key)
     {
-        player.enabled = false;
-
         Dialogue dialogue = dialogues.Find(d => d.key == key);
 
         if (dialogue != null)
         {
+            player.enabled = false;
             IsRunning = true;
             StartCoroutine(RunDialogue(dialogue.sentences));
         }

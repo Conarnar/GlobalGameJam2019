@@ -193,7 +193,7 @@ Transform:
   - {fileID: 2108822807}
   - {fileID: 1998554608}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281429823
 GameObject:
@@ -205,6 +205,8 @@ GameObject:
   m_Component:
   - component: {fileID: 281429825}
   - component: {fileID: 281429824}
+  - component: {fileID: 281429827}
+  - component: {fileID: 281429826}
   m_Layer: 0
   m_Name: Bed
   m_TagString: Untagged
@@ -278,8 +280,73 @@ Transform:
   - {fileID: 1044174965}
   - {fileID: 1116263002}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &281429826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281429823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 1579414223}
+  text: {fileID: 1579414222}
+  player: {fileID: 1212939718}
+  dialogues:
+  - key: start
+    sentences:
+    - 'April: "Why did it have to be locked. The one time that he locked both locks
+      and it''s when I get a chance to escape..."'
+    - 'April: "Hmmm... I wonder if this key unlocks my room. Greg didn''t seem to
+      lock the door with the key like usual. Maybe he dropped it before he came downstairs."'
+--- !u!114 &281429827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281429823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b470b9c06ee494db3c8d87a9a095df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerName: cutscene1post
+  requireTrigger: cutscene1
+  deleteIfTriggered: 0
+  invokeOnStart: 1
+  events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 281429826}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: start
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 281429827}
+        m_MethodName: triggerKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: cutscene1post
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &338287106
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,13 +633,13 @@ GameObject:
   - component: {fileID: 458015276}
   - component: {fileID: 458015275}
   - component: {fileID: 458015274}
-  - component: {fileID: 458015273}
   - component: {fileID: 458015272}
   - component: {fileID: 458015271}
   - component: {fileID: 458015270}
   - component: {fileID: 458015280}
   - component: {fileID: 458015279}
   - component: {fileID: 458015278}
+  - component: {fileID: 458015273}
   m_Layer: 0
   m_Name: Grid
   m_TagString: Untagged
@@ -605,7 +672,7 @@ Transform:
   m_Children:
   - {fileID: 584548692}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &458015256
 BoxCollider2D:
@@ -631,7 +698,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 2.5}
+  m_Size: {x: 0.25, y: 2.01}
   m_EdgeRadius: 0
 --- !u!61 &458015257
 BoxCollider2D:
@@ -646,7 +713,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 5.1239, y: 8.4354}
+  m_Offset: {x: 5.1239, y: 9.06}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -657,7 +724,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 3}
+  m_Size: {x: 0.25, y: 3.86}
   m_EdgeRadius: 0
 --- !u!61 &458015258
 BoxCollider2D:
@@ -672,7 +739,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 5.1239, y: 4.25}
+  m_Offset: {x: 5.1239, y: 4.01}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -802,7 +869,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.8753, y: 7.63}
+  m_Offset: {x: 1.8753, y: 7.49}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -813,7 +880,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 5.2}
+  m_Size: {x: 0.25, y: 4.96}
   m_EdgeRadius: 0
 --- !u!61 &458015264
 BoxCollider2D:
@@ -828,7 +895,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.8753, y: 3.63}
+  m_Offset: {x: 1.8753, y: 3.38}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -839,7 +906,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 1.3}
+  m_Size: {x: 0.25, y: 1.24}
   m_EdgeRadius: 0
 --- !u!61 &458015265
 BoxCollider2D:
@@ -1062,7 +1129,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 11, y: 1.25}
+  m_Offset: {x: 5.1239, y: 12.72}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1073,7 +1140,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3, y: 1.2}
+  m_Size: {x: 0.25, y: 1.37}
   m_EdgeRadius: 0
 --- !u!61 &458015274
 BoxCollider2D:
@@ -1267,6 +1334,8 @@ GameObject:
   m_Component:
   - component: {fileID: 468420547}
   - component: {fileID: 468420546}
+  - component: {fileID: 468420549}
+  - component: {fileID: 468420548}
   m_Layer: 0
   m_Name: stairs_0
   m_TagString: Untagged
@@ -1332,11 +1401,50 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.933164, y: 12.450666, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 907816921}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &468420548
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468420545}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
+--- !u!114 &468420549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468420545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a249462456c8d74b87ea7fc298c9e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Floor 4
+  spawnPoint: {x: -7, y: 3.25, z: 0}
 --- !u!1 &470388623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1563,7 +1671,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -3509,8 +3617,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 5, y: 10, z: 0}
     second:
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -3662,8 +3770,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 5, y: 11, z: 0}
     second:
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -3815,8 +3923,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 5, y: 12, z: 0}
     second:
-      m_TileIndex: 1
-      m_TileSpriteIndex: 1
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -3968,8 +4076,8 @@ Tilemap:
       m_ColliderType: 1
   - first: {x: 5, y: 13, z: 0}
     second:
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 4
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_ObjectToInstantiate: {fileID: 0}
@@ -4031,36 +4139,36 @@ Tilemap:
       m_ColliderType: 1
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 52
+  - m_RefCount: 51
     m_Data: {fileID: 11400000, guid: 4e0c1314a1144bb41aca14215a284eba, type: 2}
-  - m_RefCount: 168
+  - m_RefCount: 165
     m_Data: {fileID: 11400000, guid: ec61ac46021fd7541b01cad7685c529f, type: 2}
   - m_RefCount: 19
     m_Data: {fileID: 11400000, guid: ac04e84c3d04cdd42874e91808c42728, type: 2}
-  - m_RefCount: 19
+  - m_RefCount: 21
     m_Data: {fileID: 11400000, guid: dbe2cebe2396adf4d8fbb24e61228780, type: 2}
-  - m_RefCount: 5
+  - m_RefCount: 6
     m_Data: {fileID: 11400000, guid: 47acdc093fbf36c499570330aa1ad5aa, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: f527ddf8bf53bd2488edf4926dba881f, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 0133294ccdfa3804cb2075d33f226bf3, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 13c93c70457dcdd4c930270fd9adca9e, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 52
+  - m_RefCount: 51
     m_Data: {fileID: 21300002, guid: bd541f4af688af84f8ce1708124ec4d8, type: 3}
-  - m_RefCount: 168
+  - m_RefCount: 165
     m_Data: {fileID: 21300010, guid: bd541f4af688af84f8ce1708124ec4d8, type: 3}
   - m_RefCount: 19
     m_Data: {fileID: 21300012, guid: bd541f4af688af84f8ce1708124ec4d8, type: 3}
-  - m_RefCount: 19
+  - m_RefCount: 21
     m_Data: {fileID: 21300008, guid: bd541f4af688af84f8ce1708124ec4d8, type: 3}
-  - m_RefCount: 5
+  - m_RefCount: 6
     m_Data: {fileID: 21300000, guid: bd541f4af688af84f8ce1708124ec4d8, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300018, guid: bd541f4af688af84f8ce1708124ec4d8, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 21300016, guid: bd541f4af688af84f8ce1708124ec4d8, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: 21300004, guid: bd541f4af688af84f8ce1708124ec4d8, type: 3}
@@ -4119,6 +4227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 737285153}
   - component: {fileID: 737285154}
+  - component: {fileID: 737285155}
   m_Layer: 0
   m_Name: toilet
   m_TagString: Untagged
@@ -4188,6 +4297,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &737285155
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737285152}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.14, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4545455, y: 1.4545455}
+    newSize: {x: 1.4545455, y: 1.4545455}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 1.02}
+  m_EdgeRadius: 0
 --- !u!1 &737832698
 GameObject:
   m_ObjectHideFlags: 0
@@ -4201,6 +4336,7 @@ GameObject:
   - component: {fileID: 737832700}
   - component: {fileID: 737832699}
   - component: {fileID: 737832703}
+  - component: {fileID: 737832704}
   m_Layer: 8
   m_Name: Main Door
   m_TagString: Untagged
@@ -4221,7 +4357,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.11}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4232,7 +4368,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.5}
+  m_Size: {x: 0.25, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &737832700
 MonoBehaviour:
@@ -4254,7 +4390,7 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: d68c3a3a187e8474ebdf088df611e644, type: 3}
   - {fileID: 8300000, guid: 7de58fbd1a9aeb84cae181afd6df34bb, type: 3}
-  lockId: 0
+  lockId: 2
   opened: 0
 --- !u!82 &737832701
 AudioSource:
@@ -4364,7 +4500,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &737832703
 MonoBehaviour:
@@ -4394,6 +4530,25 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &737832704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737832698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 1579414223}
+  text: {fileID: 1579414222}
+  player: {fileID: 1212939718}
+  dialogues:
+  - key: door
+    sentences:
+    - 'April: "Seems to be locked. I probably need a key of some sorts."'
 --- !u!1 &848241191
 GameObject:
   m_ObjectHideFlags: 0
@@ -4407,6 +4562,7 @@ GameObject:
   - component: {fileID: 848241192}
   - component: {fileID: 848241196}
   - component: {fileID: 848241195}
+  - component: {fileID: 848241197}
   m_Layer: 8
   m_Name: Main Bath Door
   m_TagString: Untagged
@@ -4434,7 +4590,7 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: d68c3a3a187e8474ebdf088df611e644, type: 3}
   - {fileID: 8300000, guid: 7de58fbd1a9aeb84cae181afd6df34bb, type: 3}
-  lockId: 0
+  lockId: 4
   opened: 0
 --- !u!82 &848241193
 AudioSource:
@@ -4544,7 +4700,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &848241195
 MonoBehaviour:
@@ -4587,7 +4743,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.13}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4598,8 +4754,27 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.5}
+  m_Size: {x: 0.25, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &848241197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848241191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 1579414223}
+  text: {fileID: 1579414222}
+  player: {fileID: 1212939718}
+  dialogues:
+  - key: door
+    sentences:
+    - 'April: "Seems to be locked. I probably need a key of some sorts."'
 --- !u!1 &907816919
 GameObject:
   m_ObjectHideFlags: 0
@@ -4610,6 +4785,8 @@ GameObject:
   m_Component:
   - component: {fileID: 907816921}
   - component: {fileID: 907816920}
+  - component: {fileID: 907816923}
+  - component: {fileID: 907816922}
   m_Layer: 0
   m_Name: stairs_1
   m_TagString: Untagged
@@ -4673,12 +4850,52 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 907816919}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.740456, y: -12.44866, z: 0}
+  m_LocalPosition: {x: -3.807292, y: 0.0020065308, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 468420547}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &907816922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907816919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a249462456c8d74b87ea7fc298c9e68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextScene: Floor2
+  spawnPoint: {x: -5, y: 5.8, z: 0}
+--- !u!61 &907816923
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907816919}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.5}
+  m_EdgeRadius: 0
 --- !u!1 &995071917
 GameObject:
   m_ObjectHideFlags: 0
@@ -4829,7 +5046,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &995071921
 MonoBehaviour:
@@ -4872,7 +5089,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.12}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -4883,7 +5100,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.5}
+  m_Size: {x: 0.25, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &1044174964
 GameObject:
@@ -4977,6 +5194,8 @@ GameObject:
   - component: {fileID: 1071404479}
   - component: {fileID: 1071404483}
   - component: {fileID: 1071404482}
+  - component: {fileID: 1071404485}
+  - component: {fileID: 1071404484}
   m_Layer: 8
   m_Name: Angelica's Door
   m_TagString: Untagged
@@ -5112,9 +5331,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.875, y: 10.625, z: 0.0648659}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1535902571}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1071404482
 MonoBehaviour:
@@ -5142,6 +5362,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1071404485}
+        m_MethodName: InvokeIfNotTriggered
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1535902570}
+        m_MethodName: InvokeIfNotTriggered
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!61 &1071404483
@@ -5157,7 +5399,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.08}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5168,8 +5410,74 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25, y: 0.5}
+  m_Size: {x: 0.25, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1071404484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071404478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 1579414223}
+  text: {fileID: 1579414222}
+  player: {fileID: 1212939718}
+  dialogues:
+  - key: first
+    sentences:
+    - 'April: "Wait, my door is unlocked! I might be able to escape from this damn
+      house."'
+  - key: second
+    sentences:
+    - 'April: "It worked!"'
+--- !u!114 &1071404485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071404478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b470b9c06ee494db3c8d87a9a095df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerName: firstdoor
+  requireTrigger: 
+  deleteIfTriggered: 0
+  invokeOnStart: 0
+  events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1071404484}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: first
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1071404485}
+        m_MethodName: triggerKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: firstdoor
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1116263001
 GameObject:
   m_ObjectHideFlags: 0
@@ -5343,12 +5651,12 @@ PrefabInstance:
     - target: {fileID: 4137450967644007894, guid: 6b23bb6fe5863f04abf4d6083853e198,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.914592
+      value: -1.6
       objectReference: {fileID: 0}
     - target: {fileID: 4137450967644007894, guid: 6b23bb6fe5863f04abf4d6083853e198,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.2503414
+      value: 11.2
       objectReference: {fileID: 0}
     - target: {fileID: 4137450967644007894, guid: 6b23bb6fe5863f04abf4d6083853e198,
         type: 3}
@@ -5378,7 +5686,7 @@ PrefabInstance:
     - target: {fileID: 4137450967644007894, guid: 6b23bb6fe5863f04abf4d6083853e198,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4137450967644007894, guid: 6b23bb6fe5863f04abf4d6083853e198,
         type: 3}
@@ -5397,6 +5705,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b23bb6fe5863f04abf4d6083853e198, type: 3}
+--- !u!114 &1212939718 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4137450967644007893, guid: 6b23bb6fe5863f04abf4d6083853e198,
+    type: 3}
+  m_PrefabInstance: {fileID: 1212939717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6191f1e464cfed47a50c4b366ea7556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1253816074
 GameObject:
   m_ObjectHideFlags: 0
@@ -5556,8 +5876,249 @@ Transform:
   - {fileID: 2024395732}
   - {fileID: 737285153}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1535902569
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1535902571}
+  - component: {fileID: 1535902570}
+  m_Layer: 8
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1535902570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535902569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b470b9c06ee494db3c8d87a9a095df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerName: seconddoor
+  requireTrigger: cutscene1
+  deleteIfTriggered: 0
+  invokeOnStart: 0
+  events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1071404484}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: second
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1535902570}
+        m_MethodName: triggerKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: seconddoor
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!4 &1535902571
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535902569}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1071404481}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1579414221
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6563293542246736881, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_Name
+      value: Dialogue Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6563293542246736885, guid: 5964138e47847504fa27fe72465f4995,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5964138e47847504fa27fe72465f4995, type: 3}
+--- !u!114 &1579414222 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6563293542254353420, guid: 5964138e47847504fa27fe72465f4995,
+    type: 3}
+  m_PrefabInstance: {fileID: 1579414221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1579414223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6563293541717469967, guid: 5964138e47847504fa27fe72465f4995,
+    type: 3}
+  m_PrefabInstance: {fileID: 1579414221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1579414224 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6563293541919341644, guid: 5964138e47847504fa27fe72465f4995,
+    type: 3}
+  m_PrefabInstance: {fileID: 1579414221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1579414225 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6563293542057740871, guid: 5964138e47847504fa27fe72465f4995,
+    type: 3}
+  m_PrefabInstance: {fileID: 1579414221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1641529997
 GameObject:
   m_ObjectHideFlags: 0
@@ -5568,7 +6129,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1641529999}
   - component: {fileID: 1641529998}
-  m_Layer: 0
+  - component: {fileID: 1641530004}
+  - component: {fileID: 1641530003}
+  - component: {fileID: 1641530002}
+  - component: {fileID: 1641530001}
+  - component: {fileID: 1641530000}
+  m_Layer: 8
   m_Name: Safe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5635,8 +6201,191 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1641530000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641529997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b470b9c06ee494db3c8d87a9a095df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerName: key3
+  requireTrigger: 
+  deleteIfTriggered: 0
+  invokeOnStart: 0
+  events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1641530003}
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1641530001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641529997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f71967c2b6485c4d8496527cc22daf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1641530000}
+        m_MethodName: InvokeIfNotTriggered
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1641530002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641529997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 1579414223}
+  text: {fileID: 1579414222}
+  player: {fileID: 1212939718}
+  dialogues:
+  - key: incorrect
+    sentences:
+    - The safe does not open
+  - key: correct
+    sentences:
+    - The safe opens
+    - You obtain a key
+    - 'April: "Why does he have so many different keys?"'
+    - 'April: "Oh well..."'
+--- !u!114 &1641530003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641529997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72aedc43340cd6b4c82366becb08bfd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters: 4
+  numbers: 1
+  answer: 0524
+  player: {fileID: 1212939718}
+  textBox: {fileID: 1579414225}
+  text: {fileID: 1579414224}
+  onCorrect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1641530000}
+        m_MethodName: AddKey
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1641530000}
+        m_MethodName: triggerKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: key3
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1641530002}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: correct
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onIncorrect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1641530002}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: incorrect
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!61 &1641530004
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1641529997}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.3333334, y: 1.3333334}
+    newSize: {x: 1.3333334, y: 1.3333334}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.26, y: 1.06}
+  m_EdgeRadius: 0
 --- !u!1 &1701050739
 GameObject:
   m_ObjectHideFlags: 0
@@ -5647,6 +6396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701050740}
   - component: {fileID: 1701050741}
+  - component: {fileID: 1701050742}
   m_Layer: 0
   m_Name: toilet
   m_TagString: Untagged
@@ -5716,6 +6466,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1701050742
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701050739}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.14, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.4545455, y: 1.4545455}
+    newSize: {x: 1.4545455, y: 1.4545455}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9, y: 1.02}
+  m_EdgeRadius: 0
 --- !u!1 &1723928016
 GameObject:
   m_ObjectHideFlags: 0
@@ -5805,6 +6581,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1998554608}
   - component: {fileID: 1998554609}
+  - component: {fileID: 1998554611}
+  - component: {fileID: 1998554610}
   m_Layer: 0
   m_Name: Rug
   m_TagString: Untagged
@@ -5874,6 +6652,297 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1998554610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998554607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 1579414223}
+  text: {fileID: 1579414222}
+  player: {fileID: 1212939718}
+  dialogues:
+  - key: start
+    sentences:
+    - 'April: "I miss my house. I just want to go back and enjoy my life. I don''t
+      even remember how long it''s been since HE kidnapped me."'
+    - 'April: "If only he left my door unlocked just once, I could make a run for
+      it..."'
+--- !u!114 &1998554611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998554607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b470b9c06ee494db3c8d87a9a095df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerName: start
+  requireTrigger: 
+  deleteIfTriggered: 0
+  invokeOnStart: 1
+  events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1998554610}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: start
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1998554611}
+        m_MethodName: triggerKey
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: start
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &2012814901
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2012814906}
+  - component: {fileID: 2012814905}
+  - component: {fileID: 2012814904}
+  - component: {fileID: 2012814903}
+  - component: {fileID: 2012814902}
+  - component: {fileID: 2012814907}
+  m_Layer: 8
+  m_Name: Stairs Door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2012814902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012814901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f71967c2b6485c4d8496527cc22daf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2012814904}
+        m_MethodName: Toggle
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!61 &2012814903
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012814901}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.12}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &2012814904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012814901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18b36a92189233f4cb0b70c8bc8d9a5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 584548694}
+  position: {x: 5, y: 11, z: 0}
+  doorTiles:
+  - {fileID: 11400000, guid: 0133294ccdfa3804cb2075d33f226bf3, type: 2}
+  - {fileID: 11400000, guid: c3316a7ae3a1a804d95b92e2955c69c4, type: 2}
+  sounds:
+  - {fileID: 8300000, guid: d68c3a3a187e8474ebdf088df611e644, type: 3}
+  - {fileID: 8300000, guid: 7de58fbd1a9aeb84cae181afd6df34bb, type: 3}
+  lockId: 5
+  opened: 0
+--- !u!82 &2012814905
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012814901}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0.25678682
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &2012814906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012814901}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.125, y: 11.62, z: 0.18940413}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2012814907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012814901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 1579414223}
+  text: {fileID: 1579414222}
+  player: {fileID: 1212939718}
+  dialogues:
+  - key: door
+    sentences:
+    - 'April: "Seems to be locked. I probably need a key of some sorts."'
 --- !u!1 &2024395731
 GameObject:
   m_ObjectHideFlags: 0
@@ -5884,7 +6953,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2024395732}
   - component: {fileID: 2024395733}
-  m_Layer: 0
+  - component: {fileID: 2024395736}
+  - component: {fileID: 2024395735}
+  - component: {fileID: 2024395734}
+  m_Layer: 8
   m_Name: sinkAndCabinetWithPainKillers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5953,6 +7025,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2024395734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024395731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 1579414223}
+  text: {fileID: 1579414222}
+  player: {fileID: 1212939718}
+  dialogues:
+  - key: interact
+    sentences:
+    - 'April: "Painkillers... spilled all over the sink." '
+    - 'April: "Wait, didn''t Greg''s wife OD off of something like these?" '
+    - 'April: "Did he never clean these up?"'
+--- !u!114 &2024395735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024395731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f71967c2b6485c4d8496527cc22daf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2024395734}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: interact
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!61 &2024395736
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2024395731}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.04, y: -0.11}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.2307693, y: 1.2307693}
+    newSize: {x: 1.2307693, y: 1.2307693}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.95, y: 0.56}
+  m_EdgeRadius: 0
 --- !u!1 &2044912135
 GameObject:
   m_ObjectHideFlags: 0
@@ -6032,7 +7179,7 @@ Transform:
   - {fileID: 470388624}
   - {fileID: 1701050740}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2080358327
 GameObject:
@@ -6203,7 +7350,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2108822807}
   - component: {fileID: 2108822808}
-  m_Layer: 0
+  - component: {fileID: 2108822810}
+  - component: {fileID: 2108822809}
+  - component: {fileID: 2108822811}
+  m_Layer: 8
   m_Name: book
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6272,6 +7422,83 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2108822809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108822806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf22c390649eee64bac4db1644b0d9cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 1579414223}
+  text: {fileID: 1579414222}
+  player: {fileID: 1212939718}
+  dialogues:
+  - key: interact
+    sentences:
+    - 'April: "It''s a diary entry from Angelica."'
+    - 'April: "It reads: May 24th, 2014:"'
+    - 'April: "Dear Diary, I''m so excited for my birthday today! I hope that I get
+      that super special awesome fidget spinner that I''ve always wanted."'
+    - 'April: "I''ll have to tell you how it goes tomorrow. Until then, bye!"'
+--- !u!61 &2108822810
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108822806}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.13}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.98, y: 0.88}
+  m_EdgeRadius: 0
+--- !u!114 &2108822811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2108822806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f71967c2b6485c4d8496527cc22daf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2108822809}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: interact
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &2147099583
 GameObject:
   m_ObjectHideFlags: 0
