@@ -314,7 +314,7 @@ MonoBehaviour:
     sentences:
     - 'April: "The monitor''s unlocked, maybe I can call for help on it."'
     - 'April: "Are you serious! It''s not connected to a network."'
-    - 'April: "Actually, it seems to have only one file on it."'
+    - 'April: "What are these files on here?"'
     - 'April: "Angelica.txt"'
     - 'April: "I wonder what''s in it."'
     - "It's over: 01-15-19\r\nIt's over: 01-15-19\r\nIt's over: 01-15-19"
@@ -325,6 +325,17 @@ MonoBehaviour:
     - "It's over: 01-15-19\r\nIt's over: 01-15-19\r\nIt's over: 01-15-19"
     - "It's over: 01-15-19\r\nIt's over: 01-15-19\r\nIt's over: 01-15-19"
     - "It's over: 01-15-19\r\nIt's over: 01-15-19\r\nIt's over: 01-15-19"
+    - 'April: "Huh"'
+    - 'April: "Angelica.png"'
+    - 'April: "Is that what Angelica looked like? Greg never brough her outside and
+      I never got to see her while she was alive."'
+    - 'April: "She looks a lot like me."'
+    - 'April: "..."'
+    - 'April: "Is that why he chose to kidnap me?"'
+    - 'April: "Oh there''s another file."'
+    - 'April: "Notes.txt"'
+    - 'April: "If you run out of options, there is the safe in the attic. You know
+      the code. You''ve been typing it by hand for years on end."'
 --- !u!114 &89722093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6267,6 +6278,70 @@ MonoBehaviour:
     - 'T.V.: "It has been one week since April Jones was reported missing. There are
       no signs of her whereabouts."'
     - 'April: "Man, already a week. I need to get out of here."'
+--- !u!1 &1688749761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1688749762}
+  - component: {fileID: 1688749763}
+  m_Layer: 8
+  m_Name: why did i have to make event triggers like this
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1688749762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688749761}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1974255937}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1688749763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1688749761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b470b9c06ee494db3c8d87a9a095df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerName: 
+  requireTrigger: bat
+  deleteIfTriggered: 0
+  invokeOnStart: 1
+  events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1974255936}
+        m_MethodName: set_sprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: 53d31dc928b7f56408e5758d78e430ef,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1727463290
 GameObject:
   m_ObjectHideFlags: 0
@@ -6507,6 +6582,9 @@ MonoBehaviour:
   - key: correct
     sentences:
     - The safe opens
+    - 'April: "God he must miss his family. If it weren''t for me being kidnapped
+      I might actually feel sorry for the guy."'
+    - 'April: "He lost what makes his home, well home."'
     - You obtained a key
     - 'April: "Another one?"'
   - key: incorrect
@@ -6834,6 +6912,8 @@ GameObject:
   - component: {fileID: 1974255938}
   - component: {fileID: 1974255940}
   - component: {fileID: 1974255939}
+  - component: {fileID: 1974255942}
+  - component: {fileID: 1974255941}
   m_Layer: 8
   m_Name: Baseball_Bat_In_Class_Then_Missing-1
   m_TagString: Untagged
@@ -6899,7 +6979,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.64, y: -5.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1688749762}
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6945,12 +7026,14 @@ MonoBehaviour:
   text: {fileID: 361017888}
   player: {fileID: 1541506745}
   dialogues:
-  - key: locked_interact
+  - key: correct
     sentences:
-    - 'April: Hmmm it''s locked. Seems like I need a number combination to open it. '
-  - key: unlocked_interact
+    - Obtained bat
+    - 'April: "Maybe I can just smash his face in with this. Or something... I just
+      need to hit something."'
+  - key: incorrect
     sentences:
-    - Picked Up Baseball Bat
+    - 'April: "Hmmm it''s locked. Seems like I need a number combination to open it."'
 --- !u!114 &1974255940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6966,15 +7049,61 @@ MonoBehaviour:
   onInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1974255939}
-        m_MethodName: Trigger
+      - m_Target: {fileID: 1974255942}
+        m_MethodName: InvokeIfNotTriggered
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1974255941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974255935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72aedc43340cd6b4c82366becb08bfd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characters: 5
+  numbers: 1
+  answer: 15311
+  player: {fileID: 1541506745}
+  textBox: {fileID: 361017891}
+  text: {fileID: 361017890}
+  onCorrect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1974255942}
+        m_MethodName: triggerKey
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: locked_interact
+          m_StringArgument: bat
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1974255936}
+        m_MethodName: set_sprite
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 21300000, guid: 53d31dc928b7f56408e5758d78e430ef,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1974255939}
@@ -6985,9 +7114,57 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: unlocked_interact
+          m_StringArgument: correct
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onIncorrect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1974255939}
+        m_MethodName: Trigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: incorrect
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1974255942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974255935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b470b9c06ee494db3c8d87a9a095df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerName: bat
+  requireTrigger: 
+  deleteIfTriggered: 0
+  invokeOnStart: 0
+  events:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1974255941}
+        m_MethodName: Activate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &2058681697
