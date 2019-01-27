@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class EventTriggers : MonoBehaviour
 {
@@ -48,5 +49,10 @@ public class EventTriggers : MonoBehaviour
     public void triggerKey(string key)
     {
         triggers.Add(key);
+    }
+
+    public void ChangeScene(string name)
+    {
+        SceneManager.LoadScene(name);
     }
 }

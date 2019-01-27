@@ -25,6 +25,7 @@ public class Stairs : MonoBehaviour
 
     IEnumerator NextFloor(Collider2D collision)
     {
+        FadeManager.FadeToColor(Color.black, 30);
         for (int i = 0; i < 30; i++)
         {
             collision.transform.position = Vector3.Lerp(collision.transform.position, (Vector2) transform.position - collision.offset, 0.1f);
@@ -33,5 +34,6 @@ public class Stairs : MonoBehaviour
 
         spawn = spawnPoint;
         SceneManager.LoadScene(nextScene);
+        FadeManager.FadeToColor(Color.clear, 30);
     }
 }

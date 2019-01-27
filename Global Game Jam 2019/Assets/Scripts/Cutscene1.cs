@@ -35,9 +35,14 @@ public class Cutscene1 : MonoBehaviour
         DialogueTrigger trigger = GetComponent<DialogueTrigger>();
         trigger.Trigger("cutscene");
 
-        yield return new WaitUntil(() => !trigger.IsRunning);
-        player.enabled = false;
+        yield return new WaitUntil(() => trigger.GetIndex > 3);
 
+        FadeManager.FadeToColor(Color.black, 120);
+
+        for (int i = 0; i < 110; i++)
+            yield return null;
+
+        FadeManager.FadeToColor(Color.clear, 30);
         Stairs.spawn = new Vector3(-1.6f, 11.2f);
         SceneManager.LoadScene("Floor 3");
     }

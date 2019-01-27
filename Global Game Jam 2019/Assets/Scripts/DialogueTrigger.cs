@@ -12,6 +12,7 @@ public class DialogueTrigger : MonoBehaviour
     public List<Dialogue> dialogues = new List<Dialogue>();
 
     public bool IsRunning { get; private set; } = false;
+    public int GetIndex { get; private set; } = 0;
 
     void Start()
     {
@@ -21,28 +22,41 @@ public class DialogueTrigger : MonoBehaviour
 
     public void Trigger(string key)
     {
+        Trigger(key, 0);
+    }
+
+    public void TriggerAfterFadeDelay(string key)
+    {
+        Trigger(key, 30);
+    }
+
+    public void Trigger(string key, int delay)
+    {
         Dialogue dialogue = dialogues.Find(d => d.key == key);
 
         if (dialogue != null)
         {
             player.enabled = false;
             IsRunning = true;
-            StartCoroutine(RunDialogue(dialogue.sentences));
+            StartCoroutine(RunDialogue(dialogue.sentences, delay));
         }
     }
 
-    IEnumerator RunDialogue(string[] sentences)
+    IEnumerator RunDialogue(string[] sentences, int delay)
     {
+        for (int i = 0; i < delay; i++)
+            yield return null;
+
         for (int i = 0; i < 10; i++)
         {
             textBox.color = new Color(1, 1, 1, (i + 1)/10f);
             yield return null;
         }
 
-        foreach (string line in sentences)
+        for (GetIndex = 0; GetIndex < sentences.Length; GetIndex++)
         {
             text.text = "";
-            char[] characters = line.ToCharArray();
+            char[] characters = sentences[GetIndex].ToCharArray();
 
             for (int i = 0; i < characters.Length; i++)
             {
