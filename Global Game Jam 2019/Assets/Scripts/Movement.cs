@@ -21,6 +21,19 @@ public class Movement : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && !moving)
+        {
+            RaycastHit2D hit = Physics2D.Raycast((Vector2)transform.position + GetComponent<Collider2D>().offset, facingDirection, 0.5f, 1 << 8);
+
+            if (hit)
+            {
+                hit.transform.GetComponent<Interactable>().onInteract.Invoke();
+            }
+        }
+    }
+
     void FixedUpdate()
     {
         Vector2 direction;
@@ -47,16 +60,6 @@ public class Movement : MonoBehaviour
         if (direction.sqrMagnitude > 0)
         {
             facingDirection = direction;
-        }
-        
-        if (Input.GetKeyDown(KeyCode.Space) && !moving)
-        {
-            RaycastHit2D hit = Physics2D.Raycast((Vector2) transform.position + GetComponent<Collider2D>().offset, facingDirection, 1, 1 << 8);
-
-            if (hit)
-            {
-                hit.transform.GetComponent<Interactable>().onInteract.Invoke();
-            }
         }
 
         rigidBody.velocity = direction * 2;
