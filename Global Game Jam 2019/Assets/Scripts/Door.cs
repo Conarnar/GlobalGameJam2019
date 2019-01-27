@@ -38,7 +38,7 @@ public class Door : MonoBehaviour
 
             if (dialogue != null)
             {
-                dialogue.Trigger();
+                dialogue.Trigger("door");
             }
         }
     }

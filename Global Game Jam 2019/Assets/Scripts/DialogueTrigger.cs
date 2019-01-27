@@ -9,8 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     public Text text;
     public Movement player;
 
-    [TextArea]
-    public string[] sentences;
+    public List<Dialogue> dialogues = new List<Dialogue>();
 
     void Start()
     {
@@ -18,13 +17,17 @@ public class DialogueTrigger : MonoBehaviour
         text.text = "";
     }
 
-    public void Trigger()
+    public void Trigger(string key)
     {
         player.enabled = false;
-        StartCoroutine(RunDialogue());
+
+        Dialogue dialogue = dialogues.Find(d => d.key == key);
+
+        if (dialogue != null)
+            StartCoroutine(RunDialogue(dialogue.sentences));
     }
 
-    IEnumerator RunDialogue()
+    IEnumerator RunDialogue(string[] sentences)
     {
         for (int i = 0; i < 10; i++)
         {
@@ -67,4 +70,12 @@ public class DialogueTrigger : MonoBehaviour
 
         player.enabled = true;
     }
+}
+
+[System.Serializable]
+public class Dialogue
+{
+    public string key;
+    [TextArea]
+    public string[] sentences;
 }
